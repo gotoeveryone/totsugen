@@ -39,13 +39,16 @@ func getDisplayText(value string, count int) string {
 		strings.Repeat("Y^", padLen))
 }
 
+var (
+	v = flag.String("value", "", "want convert value")
+)
+
 func main() {
-	v := flag.String("value", "", "want convert value")
 	flag.Parse()
 	value := *v
 
 	if value == "" {
-		fmt.Println("too few arguments")
+		fmt.Println("too few arguments, try add `-h` option")
 		os.Exit(1)
 	}
 

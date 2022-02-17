@@ -1,6 +1,7 @@
 # totsugen
 
 ![Build Status](https://github.com/gotoeveryone/totsugen/workflows/Build/badge.svg)
+[![GitHub version](https://badge.fury.io/gh/gotoeveryone%2Ftotsugen.svg)](https://badge.fury.io/gh/gotoeveryone%2Ftotsugen)
 
 ## Requirements
 
@@ -9,7 +10,7 @@
 ## Run
 
 ```console
-$ go run src/main.go -value {value} # ex: go run src/main.go -value hogefuga
+$ go run main.go -value {value} # ex: go run main.go -value hogefuga
 ```
 
 ## Format check
