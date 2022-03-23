@@ -40,20 +40,26 @@ func getDisplayText(value string, count int) string {
 }
 
 var (
-	v = flag.String("value", "", "want convert value")
+	version       = "development"
+	value         = flag.String("value", "", "want convert value")
+	IsShowVersion = flag.Bool("version", false, "show version")
 )
 
 func main() {
 	flag.Parse()
-	value := *v
 
-	if value == "" {
+	if *IsShowVersion {
+		fmt.Println(version)
+		os.Exit(0)
+	}
+
+	if *value == "" {
 		fmt.Println("too few arguments, try add `-h` option")
 		os.Exit(1)
 	}
 
-	count := getStringCount(value)
-	text := getDisplayText(value, count)
+	count := getStringCount(*value)
+	text := getDisplayText(*value, count)
 
 	fmt.Println(text)
 }
