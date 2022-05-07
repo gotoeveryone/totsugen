@@ -20,7 +20,7 @@ func TestHasMultibyte(t *testing.T) {
 	}
 }
 
-func TestGetStringCount(t *testing.T) {
+func TestStringCount(t *testing.T) {
 	patterns := map[string]int{
 		"hoge123":    7,
 		"突然の死":       8,
@@ -29,14 +29,14 @@ func TestGetStringCount(t *testing.T) {
 		"サロゲートペア(𡌛)": 18,
 	}
 	for value, count := range patterns {
-		c := getStringCount(value)
+		c := stringCount(value)
 		if c != count {
 			t.Errorf("Test failed: return value is not match, actual: %d, expected: %d", c, count)
 		}
 	}
 }
 
-func TestGetDisplaytext(t *testing.T) {
+func TestDisplaytext(t *testing.T) {
 	patterns := map[string]int{
 		"hoge123":    7,
 		"突然の死":       8,
@@ -45,7 +45,7 @@ func TestGetDisplaytext(t *testing.T) {
 		"サロゲートペア(𡌛)": 18,
 	}
 	for value, count := range patterns {
-		text := getDisplayText(value, count)
+		text := displayText(value, count)
 		if !strings.Contains(text, value) {
 			t.Errorf("Test failed: return value is not contains %s, actual: %s", value, text)
 		}

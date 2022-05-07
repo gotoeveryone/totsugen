@@ -10,7 +10,7 @@
 ## Run
 
 ```console
-$ go run main.go -value {value} # ex: go run main.go -value hogefuga
+$ go run main.go
 ```
 
 ## Format check
