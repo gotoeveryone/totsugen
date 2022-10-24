@@ -5,7 +5,7 @@
 
 ## Requirements
 
-- Go 1.17+
+- Go 1.19+
 
 ## Run
 
