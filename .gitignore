@@ -20,3 +20,6 @@
 
 # goenv
 .go-version
+
+# asdf
+.tool-versions
